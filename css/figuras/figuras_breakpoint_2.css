@@ -21,6 +21,10 @@ header{
     gap: 25px;
     grid-template-rows: repeat(auto-fill,minmax(210px,1fr));
 }
+.figure-text p 
+{
+    font-size: 2.6rem;
+}
 footer
 {
     flex-direction: row;
