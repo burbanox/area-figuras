@@ -1,0 +1,61 @@
+header{
+    padding: 30px;
+}
+.header-icon img
+{
+    width: 68.5px;
+    height: 70px;
+}
+.header-icon h1
+{
+    font-size: 4.4rem;
+}
+.main-content>h1 
+{
+    font-size: 3.8rem;
+}
+.figure-container
+{
+    padding: 25px;
+    grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
+    gap: 25px;
+    grid-template-rows: repeat(auto-fill,minmax(210px,1fr));
+}
+footer
+{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.2rem;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 50px;
+}
+.instagram span
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.instagram>a,.gmail>a
+{
+    display: flex;
+    align-items: center;
+}
+.gmail span
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.repository img
+{ 
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 110px;
+}
+.contact-list .instagram
+{
+    margin-bottom: 30px;
+}
