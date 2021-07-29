@@ -1,0 +1,62 @@
+header
+{
+    padding-left: 40px;
+}
+.main-form{
+    padding: 35px;
+}
+.drawing
+{
+    padding: 35px;
+}
+.main-form h2,
+.drawing h2 {
+  font-size: 3.3rem;
+}
+.main-form p {
+    font-size: 2.5rem;
+}
+.form-input input {
+    width: 75%;
+}
+.button-section button {
+    width: 95px;
+    height: 65px;
+    font-size: 2.1rem;
+    border-radius: 10px;
+}
+input,
+select,
+textarea {
+  color: var(--main-color);
+  font-family: var(--main-font-family);
+  font-size: 2.5rem;
+}
+footer
+{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.2rem;
+}
+.instagram span
+{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.instagram>a,.gmail>a
+{
+    display: flex;
+    align-items: center;
+}
+.gmail span
+{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.repository img{
+    width: 110px;
+    height: 100px;
+}

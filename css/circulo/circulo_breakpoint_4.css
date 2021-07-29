@@ -1,0 +1,26 @@
+header
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.header-icon img
+{
+    width: 73.5px;
+    height: 75px;
+}
+.header-icon h1
+{
+    font-size: 5.3rem;
+}
+.main-section {
+    gap: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.main-form{
+    padding: 25px;
+}
+.drawing
+{
+    padding: 25px;
+}

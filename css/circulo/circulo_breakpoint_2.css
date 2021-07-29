@@ -1,0 +1,37 @@
+.header-icon img
+{
+    width: 58.5px;
+    height: 60px;
+}
+.header-icon h1
+{
+    font-size: 3.7rem;
+}
+.main-section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+footer
+{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.instagram span
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.instagram>a,.gmail>a
+{
+    display: flex;
+    align-items: center;
+}
+.gmail span
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
