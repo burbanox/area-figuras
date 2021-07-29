@@ -24,6 +24,7 @@ body {
   font-family: var(--main-font-family);
   min-width: var(--min-width);
   max-width: var(--max-width);
+  min-height: 100vh;
   margin: 0 auto;
 }
 header {
