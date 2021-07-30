@@ -1,0 +1,34 @@
+.main-form h2,
+.drawing h2 {
+  font-size: 4rem;
+}
+.main-form p {
+    font-size: 3.2rem;
+    font-weight: bold;
+ }
+ .form-input input::placeholder {
+    color: var(--main-color);
+    font-family: var(--main-font-family);
+  }
+  input,
+  select,
+  textarea {
+    color: var(--main-color);
+    font-family: var(--main-font-family);
+  }
+  .form-input p {
+    margin-right: 10px;
+  }
+  .button-section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .button-section button {
+    width: 115px;
+    height: 85px;
+    font-size: 2.5rem;
+  }
+  .main-section {
+      padding: 100px 70px;
+      gap: 70px;
+  }
