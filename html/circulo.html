@@ -35,17 +35,19 @@
                 <h2>Fill in the blanks :</h2>
                 <div class="form-input">
                     <p>R = </p>
-                    <input type="number" required>
+                    <input type="number" id="input" >
                 </div>
-                <p>Area =</p>
+                <p id="resultSpace">Area =</p>
                 <div class="button-section">
-                  <button>Clear Out</button>
-                  <button>Calculate</button>
+                  <button type="button" id="buttonClear">Clear Out</button>
+                  <button type="button" id="buttonCalculate">Calculate</button>
                 </div>
             </form>
             <div class="drawing">
                 <h2>Representation : </h2>
-                <canvas id="mycanvas"></canvas>
+                <div class="canvas-container">
+                  <canvas id="mycanvas" width="228" height="228"></canvas>
+                </div>
             </div>
         </section>
     </main>
@@ -82,5 +84,6 @@
           /></a>
         </section>
       </footer>
+      <script src="../javascript/circulo.js"></script>
   </body>
 </html>
