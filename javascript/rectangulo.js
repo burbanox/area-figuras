@@ -21,11 +21,11 @@ buttonCalculate.addEventListener("click",()=>
         alert("Fill the blanks")
     } else
     {
-        let area = calcularArea(input_1.value,input_2.value).toFixed(3)
+        let area = calcularArea(parseFloat(input_1.value),parseFloat(input_2.value)).toFixed(3)
         resultSpace.innerText = "Area = "
         resultSpace.innerText += `  ${area} u²`
         cleanCanvas()
-        dibujarRectangulo(input_1.value, input_2.value)
+        dibujarRectangulo(parseFloat(input_1.value), parseFloat(input_2.value))
     }
 })
 
