@@ -13,10 +13,16 @@ const eventoClear = () => {
   
   const eventoCalculate = () => {
     let r = input.value;
-    let area = calcularArea(r).toFixed(3);
-    resultSpace.innerText = "Area = ";
-    resultSpace.innerText += "   " + area + " u²";
-    drawCircle();
+    if(r === "")
+    {
+      alert("Fill the spaces")
+    }else
+    {
+      let area = calcularArea(r).toFixed(3);
+      resultSpace.innerText = "Area = ";
+      resultSpace.innerText += "   " + area + " u²";
+      drawCircle();
+    }
   };
   
   const cleanCanvas = () => {
