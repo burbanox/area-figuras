@@ -70,7 +70,6 @@ function drawTriangle(l1,l2,l3)
         let w = side*(l3/l1)
         h = w*Math.sin(angle_2)
         x = L - w*Math.cos(angle_2)
-        console.log("x = " + x + " , w = "+ w)
     } else if(greaterAngle===angle_2)
     {
         L = side
@@ -89,7 +88,7 @@ function drawTriangle(l1,l2,l3)
     const Py1 = centerY + h/2
     const Px2 = centerX + L/2
     const Py2 = centerY + h/2
-    const Px3 = x
+    const Px3 = centerX  + L/2 - x
     const Py3 = centerY - h/2
 
     ctx.beginPath()
