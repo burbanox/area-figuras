@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle</title>
+    <link rel="stylesheet" href="../css/triangulo/triangulo.css">
+    <link rel="stylesheet" href="../css/triangulo/triangulo_breakpoint_1.css" media="(min-width : 500px)">
+    <link rel="stylesheet" href="../css/triangulo/triangulo_breakpoint_2.css" media="(min-width : 640px)">
+    <link rel="stylesheet" href="../css/circulo/circulo_breakpoint_2.css" media="(min-width : 608px)">
+    <link rel="stylesheet" href="../css/circulo/circulo_breakpoint_3.css" media="(min-width : 668px)">
+    <link rel="stylesheet" href="../css/circulo/circulo_breakpoint_4.css" media="(min-width : 870px)">
+    <link rel="stylesheet" href="../css/circulo/circulo_breakpoint_5.css" media="(min-width : 1100px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  </head>
+  <body>
+    <header>
+      <div class="header-icon">
+        <img
+          src="http://www.clker.com/cliparts/t/5/q/F/e/N/psi-white-md.png"
+          alt=""
+        />
+        <h1>Triangle</h1>
+      </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <form action="" class="main-form">
+                <h2>Fill in the blanks :</h2>
+                <div class="form-input">
+                    <p>L1 = </p>
+                    <input type="number" id="input_1" >
+                </div>
+                <div class="form-input">
+                    <p>L2 = </p>
+                    <input type="number" id="input_2" >
+                </div>
+                <div class="form-input">
+                    <p>L3 = </p>
+                    <input type="number" id="input_3" >
+                </div>
+                <p id="resultSpace">Area =</p>
+                <div class="button-section">
+                  <button type="button" id="buttonClear">Clear Out</button>
+                  <button type="button" id="buttonCalculate">Calculate</button>
+                </div>
+            </form>
+            <div class="drawing">
+                <h2>Representation : </h2>
+                <div class="canvas-container">
+                  <canvas id="mycanvas" width="284" height="284" title="La figura muestra las proporciones de los lados"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="contact">
+          <p>Contact me :</p>
+          <ul class="contact-list">
+            <li class="instagram">
+              <a
+                target="__blank"
+                href="https://www.instagram.com/harold_burbano44/"
+              >
+                <span></span>
+                Instagram
+              </a>
+            </li>
+            <li class="gmail">
+              <a
+                target="__blank"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJNsMBlPPFNSXnvCbSmnxzTfwxgfxmpQWChwLncFLLSsxWTLdrTJZjcvmxCWXlmkVlKQMbB"
+              >
+                <span></span>
+                haroldburbano2002@gmail.com
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="repository">
+          <p>Repository of the project :</p>
+          <a target="__blank" href="https://github.com/burbanox/area-figuras"
+            ><img
+              src="https://www.sferalabs.cc/wp-content/uploads/github-logo-white.png"
+              alt=""
+          /></a>
+        </section>
+      </footer>
+      <script src="../javascript/triangulo.js"></script>
+  </body>
+</html>
