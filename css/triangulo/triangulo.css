@@ -120,6 +120,16 @@
     margin-top: 30px;
     position: relative;
   }
+  #rotation-icon
+  {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
   canvas
   {
       position: absolute;

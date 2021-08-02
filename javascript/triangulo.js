@@ -6,6 +6,31 @@ const buttonClear = document.getElementById("buttonClear")
 const buttonCalculate = document.getElementById("buttonCalculate")
 const canvas = document.getElementById("mycanvas")
 const ctx = canvas.getContext("2d")
+const rotation = document.getElementById("rotation-icon")
+
+let rAngle = 0
+let trianguloDibujado = false
+
+rotation.addEventListener("click",()=>
+{
+    let l1 = parseFloat(input_1.value)
+    let l2 = parseFloat(input_2.value)
+    let l3 = parseFloat(input_3.value)
+
+    if(trianguloDibujado)
+    {
+        cleanCanvas()
+        if(rAngle <= 2*Math.PI)
+        {
+            rAngle += Math.PI/10
+            drawTriangle(l1,l2,l3,rAngle)
+        }else
+        {
+            rAngle = Math.PI/10
+            drawTriangle(l1,l2,l3,rAngle)
+        }
+    }
+})
 
 buttonClear.addEventListener("click", ()=>
 {
@@ -14,6 +39,7 @@ buttonClear.addEventListener("click", ()=>
     input_2.value = ""
     input_3.value = ""
     resultSpace.innerText = "Area = "
+    trianguloDibujado = false
 })
 
 buttonCalculate.addEventListener("click", ()=>
@@ -22,7 +48,7 @@ buttonCalculate.addEventListener("click", ()=>
     let l2 = parseFloat(input_2.value)
     let l3 = parseFloat(input_3.value)
 
-    if(l1 === "" || l2 === "" || l3==="")
+    if(input_1.value === "" || input_2.value === "" || input_3.value==="")
     {
         alert("Fill the spaces")
     }else
@@ -33,7 +59,8 @@ buttonCalculate.addEventListener("click", ()=>
             resultSpace.innerText = "Area = "
             cleanCanvas()
             resultSpace.innerText += ` ${area} u²`
-            drawTriangle(l1,l2,l3)
+            drawTriangle(l1,l2,l3,0)
+            trianguloDibujado = true
         }
         else
         {
@@ -52,7 +79,7 @@ function calcularArea(l1,l2,l3)
     return Math.sqrt(s*(s-l1)*(s-l2)*(s-l3))
 }
 
-function drawTriangle(l1,l2,l3)
+function drawTriangle(l1,l2,l3,rotationAngle)
 {
     const centerX = canvas.width/2
     const centerY = canvas.height/2
@@ -84,17 +111,26 @@ function drawTriangle(l1,l2,l3)
         x = L - w*Math.cos(angle_2)
     }
 
+    //get the cordenates
     const Px1 = centerX - L/2
     const Py1 = centerY + h/2
     const Px2 = centerX + L/2
     const Py2 = centerY + h/2
     const Px3 = centerX  + L/2 - x
     const Py3 = centerY - h/2
+    
+    //rotate the cordenates
+    const rPx1 = (Px1 - centerX)*Math.cos(-rotationAngle) - (Py1 - centerY)*Math.sin(-rotationAngle) + centerX
+    const rPy1 = (Px1 - centerX)*Math.sin(-rotationAngle) + (Py1 - centerY)*Math.cos(-rotationAngle) + centerY
+    const rPx2 = (Px2 - centerX)*Math.cos(-rotationAngle) - (Py2 - centerY)*Math.sin(-rotationAngle) + centerX
+    const rPy2 = (Px2 - centerX)*Math.sin(-rotationAngle) + (Py2 - centerY)*Math.cos(-rotationAngle) + centerY
+    const rPx3 = (Px3 - centerX)*Math.cos(-rotationAngle) - (Py3 - centerY)*Math.sin(-rotationAngle) + centerX
+    const rPy3 = (Px3 - centerX)*Math.sin(-rotationAngle) + (Py3 - centerY)*Math.cos(-rotationAngle) + centerY
 
     ctx.beginPath()
-    ctx.moveTo(Px1,Py1)
-    ctx.lineTo(Px2,Py2)
-    ctx.lineTo(Px3,Py3)
+    ctx.moveTo(rPx1,rPy1)
+    ctx.lineTo(rPx2,rPy2)
+    ctx.lineTo(rPx3,rPy3)
     ctx.fillStyle = "#2ea811"
     ctx.fill()
     ctx.closePath()
