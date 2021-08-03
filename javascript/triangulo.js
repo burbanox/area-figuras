@@ -127,7 +127,7 @@ function drawTriangle(l1,l2,l3,rotationAngle)
     const rPy2 = (Px2 - centerRotation.x)*Math.sin(rotationAngle) + (Py2 - centerRotation.y)*Math.cos(rotationAngle) + centerRotation.y
     const rPx3 = (Px3 - centerRotation.x)*Math.cos(rotationAngle) - (Py3 - centerRotation.y)*Math.sin(rotationAngle) + centerRotation.x
     const rPy3 = (Px3 - centerRotation.x)*Math.sin(rotationAngle) + (Py3 - centerRotation.y)*Math.cos(rotationAngle) + centerRotation.y
-    console.log("rPx1 = " + rPx1 + " rPy1 = " + rPy1)
+    
     ctx.beginPath()
     ctx.moveTo(rPx1,rPy1)
     ctx.lineTo(rPx2,rPy2)
