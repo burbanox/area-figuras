@@ -55,8 +55,12 @@ function dibujarRectangulo(l1,l2)
     ctx.lineTo(centerX + ladoGrafica_1/2,centerY - ladoGrafica_2/2)
     ctx.lineTo(centerX + ladoGrafica_1/2,centerY + ladoGrafica_2/2)
     ctx.lineTo(centerX - ladoGrafica_1/2,centerY + ladoGrafica_2/2)
-    ctx.fillStyle = "#2ea811"
+    ctx.lineTo(centerX - ladoGrafica_1/2,centerY - ladoGrafica_2/2)
+    ctx.fillStyle = "#EBE720"
     ctx.fill()
+    ctx.lineWidth = 3
+    ctx.strokeStyle =  "#2ea811"
+    ctx.stroke()
     ctx.closePath()
 }
 

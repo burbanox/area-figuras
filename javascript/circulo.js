@@ -41,8 +41,11 @@ const eventoClear = () => {
   
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    ctx.fillStyle = "#2ea811";
-    ctx.fill();
+    ctx.fillStyle = "#EBE720"
+    ctx.fill()
+    ctx.lineWidth = 3
+    ctx.strokeStyle =  "#2ea811"
+    ctx.stroke()
     ctx.closePath();
   };
 

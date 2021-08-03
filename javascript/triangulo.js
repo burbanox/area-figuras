@@ -133,11 +133,11 @@ function drawTriangle(l1,l2,l3,rotationAngle)
     ctx.lineTo(rPx2,rPy2)
     ctx.lineTo(rPx3,rPy3)
     ctx.lineTo(rPx1,rPy1)
+    ctx.fillStyle = "#EBE720"
+    ctx.fill()
     ctx.lineWidth = 3
     ctx.strokeStyle =  "#2ea811"
     ctx.stroke()
-    // ctx.fillStyle = "#2ea811"
-    // ctx.fill()
     ctx.closePath()
 }
 
