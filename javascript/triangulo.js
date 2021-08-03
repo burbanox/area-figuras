@@ -22,11 +22,11 @@ rotation.addEventListener("click",()=>
         cleanCanvas()
         if(rAngle <= 2*Math.PI)
         {
-            rAngle += Math.PI/10
+            rAngle += Math.PI/2
             drawTriangle(l1,l2,l3,rAngle)
         }else
         {
-            rAngle = Math.PI/10
+            rAngle = Math.PI/2
             drawTriangle(l1,l2,l3,rAngle)
         }
     }
@@ -118,15 +118,15 @@ function drawTriangle(l1,l2,l3,rotationAngle)
     const Py2 = centerY + h/2
     const Px3 = centerX  + L/2 - x
     const Py3 = centerY - h/2
-    
-    //rotate the cordenates
-    const rPx1 = (Px1 - centerX)*Math.cos(-rotationAngle) - (Py1 - centerY)*Math.sin(-rotationAngle) + centerX
-    const rPy1 = (Px1 - centerX)*Math.sin(-rotationAngle) + (Py1 - centerY)*Math.cos(-rotationAngle) + centerY
-    const rPx2 = (Px2 - centerX)*Math.cos(-rotationAngle) - (Py2 - centerY)*Math.sin(-rotationAngle) + centerX
-    const rPy2 = (Px2 - centerX)*Math.sin(-rotationAngle) + (Py2 - centerY)*Math.cos(-rotationAngle) + centerY
-    const rPx3 = (Px3 - centerX)*Math.cos(-rotationAngle) - (Py3 - centerY)*Math.sin(-rotationAngle) + centerX
-    const rPy3 = (Px3 - centerX)*Math.sin(-rotationAngle) + (Py3 - centerY)*Math.cos(-rotationAngle) + centerY
 
+    //rotate the cordenates
+    const rPx1 = (Px1 - centerX)*Math.cos(rotationAngle) + (Py1 - centerY)*Math.sin(rotationAngle) + centerX
+    const rPy1 = (Px1 - centerX)*Math.sin(rotationAngle) + (Py1 - centerY)*Math.cos(rotationAngle) + centerY
+    const rPx2 = (Px2 - centerX)*Math.cos(rotationAngle) + (Py2 - centerY)*Math.sin(rotationAngle) + centerX
+    const rPy2 = (Px2 - centerX)*Math.sin(rotationAngle) + (Py2 - centerY)*Math.cos(rotationAngle) + centerY
+    const rPx3 = (Px3 - centerX)*Math.cos(rotationAngle) + (Py3 - centerY)*Math.sin(rotationAngle) + centerX
+    const rPy3 = (Px3 - centerX)*Math.sin(rotationAngle) + (Py3 - centerY)*Math.cos(rotationAngle) + centerY
+    console.log("rPx1 = " + rPx1 + " rPy1 = " + rPy1)
     ctx.beginPath()
     ctx.moveTo(rPx1,rPy1)
     ctx.lineTo(rPx2,rPy2)
